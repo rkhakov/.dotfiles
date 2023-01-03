@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+dpath=$(pwd)
+
+[ -d $HOME/.config/nvim ] && rm -rf $HOME/.config/nvim
+ln -sf $dpath/config/nvim $HOME/.config/nvim
+
+[ -f $HOME/.zshrc ] && rm $HOME/.zshrc
+ln -sf $dpath/zshrc $HOME/.zshrc
+
+[ -f $HOME/.p10k.zsh ] && rm $HOME/.p10k.zsh
+ln -sf $dpath/p10k.zsh $HOME/.p10k.zsh
+
+[ -f $HOME/.config/lazygit/config.yml ] && rm $HOME/.config/lazygit/config.yml
+ln -sf $dpath/config/lazygit/config.yml $HOME/.config/lazygit/config.yml
